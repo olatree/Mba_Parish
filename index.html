@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Note</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #f8fafc;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .card {
+      background: #ffffff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+      max-width: 440px;
+      text-align: center;
+      font-size: 1.3rem;
+      line-height: 1.5;
+      color: #1e293b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" id="message">Loading message...</div>
+
+  <script>
+    // Customize your list of messages below:
+    const quotes = [
+      "You are capable of amazing things!",
+      "Special Deal: Claim 15% off at checkout today.",
+      "Fun Fact: Octopuses have three hearts.",
+      "Lucky Draw Winner: Show this screen to the cashier!",
+      "Take a deep breath and have a great day."
+    ];
+
+    // Select and display a random item on every page load
+    const picked = quotes[Math.floor(Math.random() * quotes.length)];
+    document.getElementById("message").innerText = picked;
+  </script>
+
+</body>
+</html>
