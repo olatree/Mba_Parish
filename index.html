@@ -12,22 +12,25 @@
       align-items: center;
       min-height: 100vh;
       margin: 0;
-      background: #fff; /* Pitch black background */
+      background: #000000; /* Pitch black page background */
       padding: 20px;
       box-sizing: border-box;
     }
 
     .card {
-      /* Uses your dark background image with a subtle gradient to keep text legible */
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.75) 100%),
+      /* Semi-transparent white overlay over your black background image */
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.94) 100%),
                   url('background.jpg') no-repeat center center;
       background-size: cover;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+
       padding: 36px 24px;
       border-radius: 20px;
       
-      /* Gold-tinted border and glow so the card defines clearly against the pitch black body */
-      border: 1px solid rgba(245, 158, 11, 0.35);
-      box-shadow: 0 0 35px rgba(245, 158, 11, 0.12), 0 20px 40px rgba(0, 0, 0, 0.9);
+      /* Subtle gold outline and soft shadow so the card stands out against the black body */
+      border: 1px solid rgba(245, 158, 11, 0.5);
+      box-shadow: 0 0 30px rgba(245, 158, 11, 0.15), 0 20px 45px rgba(0, 0, 0, 0.8);
       
       max-width: 440px;
       width: 100%;
@@ -37,9 +40,9 @@
 
     .badge {
       display: inline-block;
-      background: rgba(245, 158, 11, 0.18);
-      color: #fbbf24;
-      border: 1px solid rgba(245, 158, 11, 0.4);
+      background: #0369a1;
+      color: #ffffff;
+      border: 1px solid rgba(245, 158, 11, 0.6);
       font-size: 0.82rem;
       font-weight: 700;
       letter-spacing: 0.8px;
@@ -47,17 +50,15 @@
       border-radius: 999px;
       margin-bottom: 20px;
       text-transform: uppercase;
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
+      box-shadow: 0 2px 8px rgba(3, 105, 161, 0.25);
     }
 
     #message {
       font-size: 1.25rem;
       line-height: 1.6;
-      color: #ffffff;
+      color: #0f172a; /* Deep, sharp dark tone for effortless reading */
       margin-bottom: 28px;
-      font-weight: 500;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+      font-weight: 600;
     }
 
     /* Side-by-side images container */
@@ -73,9 +74,9 @@
       height: 110px;
       object-fit: cover;
       border-radius: 12px;
-      border: 1.5px solid rgba(245, 158, 11, 0.45);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
-      background-color: #ffffff; /* Clean contrast backing if logos have transparent backgrounds */
+      border: 1.5px solid rgba(245, 158, 11, 0.6);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      background-color: #ffffff;
     }
   </style>
 </head>
